@@ -18,7 +18,7 @@ PaymentRequestDemo.Payment = {
             }
           });
           return result.complete().then(function(){
-            alert('Hi '+result.payerName+' you have successfully paid Rs.'+10+' with your card')
+          $('#res_json').html(JSON.stringify(result, undefined, 2));
           });
         }).catch(function(err){
           console.log(err);
